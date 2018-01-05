@@ -1,0 +1,9 @@
+#Ignore node modules
+node_modules/
+node/
+/src/main/webapp/lib/
+/package-lock.json
+
+#Ignore Intellij Idea files
+.idea/
+*.iml
