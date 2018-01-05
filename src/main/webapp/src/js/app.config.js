@@ -9,10 +9,7 @@
     App.$inject = ['$routeProvider','$locationProvider'];
 
     function App($routeProvider, $locationProvider) {
-        // $locationProvider.html5Mode({
-        //     enabled: true,
-        //     requireBase: false
-        // });
+        $locationProvider.hashPrefix('');
     }
 })();
 
