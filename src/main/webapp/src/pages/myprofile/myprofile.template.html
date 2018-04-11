@@ -25,11 +25,11 @@
         Forum Content: <input type="text" size="75" ng-model="inputContent" ng-value="todo.content"><br>
         Forum Priority:
         <label>
-            <input type="radio" ng-model="priorityName" value="high" ng-value="todo.priority">
+            <input type="radio" ng-model="priorityName" value="high" >
             High
         </label>
         <label>
-            <input type="radio" ng-model="priorityName" value="low" ng-value="todo.priority">
+            <input type="radio" ng-model="priorityName" value="low" >
             Low
         </label><br/>
         <button ng-click="updateForumFunction(todo.id,inputName,inputContent,priorityName)">Update Forum</button>
