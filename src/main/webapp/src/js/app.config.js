@@ -10,6 +10,7 @@
 
     function App($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix('');
+
     }
 })();
 

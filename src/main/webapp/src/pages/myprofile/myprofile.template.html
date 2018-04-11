@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyProfile</title>
+</head>
+<body>
+<button ng-click="goToHome()"  >Home</button>
+
+<div ng-repeat="todo in todos track by $index">
+    <div class="callout">
+        <h4><a href = "#/forum/{{todo.id}}/{{myprofile.loginid}}">{{todo.name}}</a></h4>
+        <p> Owner : {{todo.owner}}</p>
+        <p> Priority: {{todo.priority}}</p>
+        <p> Content : {{todo.content}}</p>
+        <button ng-click="deleteFunction(todo.id)">Delete</button>
+        <button ng-click="editButton(todo.id)" >Edit</button>
+
+
+    </div>
+
+
+    <div ng-show="todos[$index].id===todo.id && visibleInput===todo.id" > 
+        Forum Name: <input type="text"  ng-model="inputName" ng-value="todo.name"><br>
+        Forum Content: <input type="text" size="75" ng-model="inputContent" ng-value="todo.content"><br>
+        Forum Priority:
+        <label>
+            <input type="radio" ng-model="priorityName" value="high" ng-value="todo.priority">
+            High
+        </label>
+        <label>
+            <input type="radio" ng-model="priorityName" value="low" ng-value="todo.priority">
+            Low
+        </label><br/>
+        <button ng-click="updateForumFunction(todo.id,inputName,inputContent,priorityName)">Update Forum</button>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

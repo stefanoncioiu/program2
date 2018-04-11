@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Create a new Forum</h2>
+Forum Name: <input type="text"  ng-model="todo.namef"><br>
+Forum Content: <input type="text" size="75" ng-model="todo.contentf"><br>
+Forum Priority:
+<label>
+    <input type="radio" ng-model="priority.name" value="high">
+    High
+</label>
+<label>
+    <input type="radio" ng-model="priority.name" value="low">
+    Low
+</label><br/>
+<button ng-click="createForumFunction()">create forum</button>
+
+</body>
+</html>

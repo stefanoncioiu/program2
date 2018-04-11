@@ -2,7 +2,7 @@
     <div class="col-md-12">
 
         <div class="page-header">
-            <h1 id="getting-started">Getting started <a class="small" href="{{main.projectWebsite}}" target="_blank">{{main.projectWebsite}}</a>
+            <h1 id="getting-started">Getting started <a class="small" href="/" target="_blank">{{main.projectWebsite}}</a>
             </h1>
         </div>
 
@@ -12,13 +12,25 @@
             <p>This view is located under <i>{{main.viewLocation}}</i></p>
         </div>
 
+        <a href="#/login"> <button>Login</button></a><br>
+        <a href="#/signin"> <button>Sign In</button></a><br>
+        <a href="#/createforum/{{main.loginid}}"> <button>CreateForum</button></a><br>
+        <a href="#/myprofile/{{main.loginid}}"> <button>MyProfile</button></a><br>
+
+
+<div ng-repeat="todo in todos">
         <div class="callout">
-            <h4>Admin User Data</h4>
-            <p> UserName : {{main.admin.username}}</p>
-            <p> UserName : {{main.admin.email}}</p>
-            <p> UserName : {{main.admin.password}}</p>
+            <h4><a href = "#/forum/{{todo.id}}/{{main.loginid}}">{{todo.name}}</a></h4>
+            <p> Owner : {{todo.owner}}</p>
+            <p> Priority: {{todo.priority}}</p>
+            <p> Content : {{todo.content}}</p>
         </div>
 
     </div>
+    </div>
+
+
+
+
 
 </div>

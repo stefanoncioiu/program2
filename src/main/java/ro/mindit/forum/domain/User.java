@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @since 1/5/2018
  */
 public class User implements Serializable {
-
+    int id;
     private String userName;
     private String email;
     private String password;
@@ -17,10 +17,18 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String userName, String email, String password) {
+    public User(int id,String userName, String email, String password) {
+        this.id=id;
         this.userName = userName;
         this.email = email;
         this.password = password;
+    }
+    public int getID() {
+        return id;
+    }
+
+    public void setID(int id) {
+        this.id = id;
     }
 
     public String getUserName() {

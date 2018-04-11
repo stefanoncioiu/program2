@@ -9,7 +9,7 @@
 
     function Routes($routeProvider) {
 
-        $routeProvider.when('/', {
+        $routeProvider.when('/main/:loginId', {
             templateUrl: 'src/pages/main/main.template.html',
             controller: 'MainCtrl',
             controllerAs: 'main'

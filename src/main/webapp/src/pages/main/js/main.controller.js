@@ -5,12 +5,12 @@
         .module('app')
         .controller('MainCtrl', MainCtrl);
 
-    MainCtrl.$inject = ['$window', 'RequestService'];
+    MainCtrl.$inject = ['$scope','$window', 'RequestService','$routeParams'];
 
-    function MainCtrl($window, RequestService) {
+    function MainCtrl($scope,$window, RequestService,$routeParams) {
 
         var vm = this;
-
+        vm.loginid=$routeParams.loginId;
         vm.projectAuthor = null;
         vm.projectName = null;
         vm.viewLocation = 'src/pages/main/main.template.html';
@@ -27,22 +27,24 @@
                 });
         };
 
-        vm.getAdmin = function () {
+        vm.getForum = function () {
             RequestService
-                .getUser('admin')
+                .getForum()
                 .then(function (res) {
-                    vm.admin = {
-                        username : res.data.userName || 'Unknown',
-                        email : res.data.email || 'Unknown',
-                        password : res.data.password || 'Unknown'
-                    }
+                    $scope.todos=res.data;
                 }, function () {
-                    vm.adminUserName = vm.adminUserName = 'Error!';
+                    $scope.todos=[];
                 });
         };
 
-        vm.getAdmin();
+
+
+
+
+        vm.getForum();
         vm.loadConfig();
+
+
 
 
         return vm;

@@ -1,0 +1,3 @@
+ro\mindit\forum\controller\ApplicationControllerTest.class
+ro\mindit\forum\service\ApplicationServiceImplTest.class
+ro\mindit\forum\spring\config\TestApplicationProperties.class

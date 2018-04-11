@@ -1,0 +1,10 @@
+ro\mindit\forum\service\ApplicationServiceImpl.class
+ro\mindit\forum\spring\initializer\WebAppInitializer.class
+ro\mindit\forum\repository\UserDAO.class
+ro\mindit\forum\repository\UserDAOImpl.class
+ro\mindit\forum\service\ApplicationService.class
+ro\mindit\forum\domain\User.class
+ro\mindit\forum\spring\config\WebMvcContextConfig.class
+ro\mindit\forum\spring\config\RootContextConfig.class
+ro\mindit\forum\spring\config\ApplicationProperties.class
+ro\mindit\forum\controller\ApplicationController.class

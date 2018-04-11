@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button ng-click="goToHome()"  >Home</button>
+<div ng-repeat="tod in todo">
+    <div class="callout">
+        <h4>{{tod.name}}</h4>
+        <p> Owner : {{tod.owner}}</p>
+        <p> Priority: {{tod.priority}}</p>
+        <p> Content : {{tod.content}}</p>
+        <p> userid : {{tod.userid}}</p>
+    </div>
+
+</div>
+
+
+Leave a comment: <input type="text" ng-model="todo.comment" size="90" ><br>
+<button ng-click="addCommentFunction()"  >Add Comment</button>
+
+<div ng-repeat="todoc in todocom">
+    <div class="callout">
+        <p>{{todoc.username}}:  {{todoc.comment}}</p>
+    </div>
+
+</div>
+
+
+<button ng-click="goEvent();" ng-hide="updateButton">Start</button>
+
+</body>
+</html>
